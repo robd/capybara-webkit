@@ -35,7 +35,10 @@ void NetworkCookieJar::overwriteCookies(const QList<QNetworkCookie>& cookieList)
 
   foreach (QNetworkCookie cookie, cookieList) {
     bool isDeletion = (!cookie.isSessionCookie() &&
-                       cookie.expirationDate() < now);
+                       false);
+
+    std::cout<<"isDeletion:\n";
+    std::cout<<isDeletion<<"\n";
 
     // validate the cookie & set the defaults if unset
     if (cookie.path().isEmpty())
