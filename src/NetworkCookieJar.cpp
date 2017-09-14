@@ -23,6 +23,9 @@ static inline bool isParentDomain(QString domain, QString reference)
   return domain.endsWith(reference) || domain == reference.mid(1);
 }
 
+
+TEST BREAK THE CPP
+
 void NetworkCookieJar::overwriteCookies(const QList<QNetworkCookie>& cookieList)
 {
   /* this function is basically a copy-and-paste of the original
