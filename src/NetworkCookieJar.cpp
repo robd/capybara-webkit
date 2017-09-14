@@ -24,8 +24,6 @@ static inline bool isParentDomain(QString domain, QString reference)
 }
 
 
-TEST BREAK THE CPP
-
 void NetworkCookieJar::overwriteCookies(const QList<QNetworkCookie>& cookieList)
 {
   /* this function is basically a copy-and-paste of the original
@@ -40,8 +38,8 @@ void NetworkCookieJar::overwriteCookies(const QList<QNetworkCookie>& cookieList)
     bool isDeletion = (!cookie.isSessionCookie() &&
                        false);
 
-    std::cout<<"isDeletion:\n";
-    std::cout<<isDeletion<<"\n";
+    cerr<<"isDeletion:\n";
+    cerr<<isDeletion<<"\n";
 
     // validate the cookie & set the defaults if unset
     if (cookie.path().isEmpty())
