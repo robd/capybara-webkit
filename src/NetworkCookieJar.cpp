@@ -7,11 +7,14 @@ NetworkCookieJar::NetworkCookieJar(QObject *parent)
 
 QList<QNetworkCookie> NetworkCookieJar::getAllCookies() const
 {
+  std::cerr<<"getAllCookies:\n";
+
   return allCookies();
 }
 
 void NetworkCookieJar::clearCookies()
 {
+  std::cerr<<"clearCookies:\n";
   setAllCookies(QList<QNetworkCookie>());
 }
 
