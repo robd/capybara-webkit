@@ -8,6 +8,7 @@ SetCookie::SetCookie(WebPageManager *manager, QStringList &arguments, QObject *p
 
 void SetCookie::start()
 {
+  std::cerr<<"SetCookie:\n";
   QList<QNetworkCookie> cookies = QNetworkCookie::parseCookies(arguments()[0].toLatin1());
   NetworkCookieJar *jar = manager()->cookieJar();
   jar->overwriteCookies(cookies);

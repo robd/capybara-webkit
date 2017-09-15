@@ -30,6 +30,8 @@ void NetworkCookieJar::overwriteCookies(const QList<QNetworkCookie>& cookieList)
      QNetworkCookieJar::setCookiesFromUrl with the domain and
      path validations removed */
 
+  std::cerr<<"overwriteCookies:\n";
+
   QString defaultPath(QLatin1Char('/'));
   QDateTime now = QDateTime::currentDateTime();
   QList<QNetworkCookie> newCookies = allCookies();
