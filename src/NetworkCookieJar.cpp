@@ -40,6 +40,8 @@ void NetworkCookieJar::overwriteCookies(const QList<QNetworkCookie>& cookieList)
 
     std::cerr<<"isDeletion:\n";
     std::cerr<<isDeletion<<"\n";
+    std::cerr<<cookie.expirationDate().toString()<<"\n";
+    std::cerr<<now.toString()<<"\n";
 
     // validate the cookie & set the defaults if unset
     if (cookie.path().isEmpty())
